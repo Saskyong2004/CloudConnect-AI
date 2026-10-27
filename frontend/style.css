@@ -1,0 +1,450 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background: #ffffff;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e8ecf2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #172033;
+}
+
+.logo span {
+    color: #4f46e5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #596579;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #f5f7ff, #eef7ff);
+    padding: 90px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.badge,
+.heading > span,
+.contact-info > span {
+    color: #4f46e5;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.hero h1 span,
+.heading strong,
+.contact-info strong {
+    color: #4f46e5;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #5d687b;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+
+/* Architecture card */
+
+.architecture-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(30, 50, 90, 0.1);
+    border: 1px solid #e7eaf0;
+}
+
+.architecture-card h3 {
+    margin-bottom: 25px;
+}
+
+.flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flow span {
+    background: #f1f3ff;
+    color: #303b66;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-size: 0.85rem;
+}
+
+.flow b {
+    color: #4f46e5;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 80px 0;
+}
+
+.heading {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.heading h2,
+.contact-info h2 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin: 12px 0 15px;
+}
+
+.heading p,
+.contact-info > p {
+    color: #667085;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features,
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card,
+.tech-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e8ef;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.card:hover,
+.tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(30, 50, 90, 0.08);
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card h3,
+.tech-card h3 {
+    margin-bottom: 8px;
+}
+
+.card p,
+.tech-card p {
+    color: #667085;
+    font-size: 0.92rem;
+}
+
+
+/* =========================
+   TECHNOLOGY
+========================= */
+
+.technology {
+    background: #f7f8fc;
+}
+
+.tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.tech-card b {
+    color: #4f46e5;
+    font-size: 0.8rem;
+}
+
+.tech-card h3 {
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #ffffff;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.contact-info h2 {
+    margin-top: 15px;
+}
+
+.contact-features {
+    margin-top: 25px;
+}
+
+.contact-features p {
+    margin: 10px 0;
+    color: #4b5565;
+}
+
+.form-card {
+    padding: 32px;
+    border: 1px solid #e2e6ee;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(30, 50, 90, 0.07);
+}
+
+.form-card h3 {
+    font-size: 1.5rem;
+}
+
+.form-card > p {
+    color: #667085;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8dde6;
+    border-radius: 7px;
+    font: inherit;
+    outline: none;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    background: #4f46e5;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#formStatus {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .heading h2,
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .features,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

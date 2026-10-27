@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CloudConnect - AWS Serverless Contact and Feedback System">
+    <title>CloudConnect AI | Serverless Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">☁ Cloud<span>Connect</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#technology">Technology</a>
+                <a href="#contact">Contact</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+
+            <div>
+                <span class="badge">AWS SERVERLESS + AI APPLICATION</span>
+
+                <h1>
+                    Connect with us,
+                    <span>powered by AWS.</span>
+                </h1>
+
+                <p>
+                    A serverless contact and feedback system that analyzes every
+                    message with AI (Amazon Comprehend and Google Gemini) and stores it in DynamoDB.
+                </p>
+
+                <a href="#contact" class="button">Send a Message →</a>
+            </div>
+
+            <div class="architecture-card">
+                <h3>Application Flow</h3>
+
+                <div class="flow">
+                    <span>🌐 Website</span>
+                    <b>→</b>
+                    <span>API Gateway</span>
+                    <b>→</b>
+                    <span>λ Lambda</span>
+                    <b>→</b>
+                    <span>🧠 AI (Comprehend + Gemini)</span>
+                    <b>→</b>
+                    <span>🗄️ DynamoDB</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+
+            <div class="heading">
+                <span>ABOUT THE PROJECT</span>
+                <h2>Simple communication, <strong>cloud powered.</strong></h2>
+
+                <p>
+                    CloudConnect allows users to submit contact messages and
+                    feedback through a web interface. The request is sent to
+                    an AWS API, processed by Lambda and stored in DynamoDB.
+                </p>
+            </div>
+
+            <div class="features">
+
+                <div class="card">
+                    <div class="icon">⚡</div>
+                    <h3>Serverless</h3>
+                    <p>Process requests without managing traditional servers.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🔗</div>
+                    <h3>API Powered</h3>
+                    <p>API Gateway connects the frontend with the backend.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🧠</div>
+                    <h3>AI Analysis</h3>
+                    <p>Sentiment, category, priority and key phrases are detected automatically.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Technology -->
+    <section id="technology" class="section technology">
+        <div class="container">
+
+            <div class="heading center">
+                <span>AWS TECHNOLOGY STACK</span>
+                <h2>Built using <strong>five AWS services.</strong></h2>
+            </div>
+
+            <div class="tech-grid">
+
+                <div class="tech-card">
+                    <b>01</b>
+                    <h3>Amazon S3</h3>
+                    <p>Hosts the static website files.</p>
+                </div>
+
+                <div class="tech-card">
+                    <b>02</b>
+                    <h3>API Gateway</h3>
+                    <p>Receives HTTP contact requests.</p>
+                </div>
+
+                <div class="tech-card">
+                    <b>03</b>
+                    <h3>AWS Lambda</h3>
+                    <p>Processes submitted form data.</p>
+                </div>
+
+                <div class="tech-card">
+                    <b>04</b>
+                    <h3>Comprehend + Gemini</h3>
+                    <p>AI sentiment, summary and suggested replies.</p>
+                </div>
+
+                <div class="tech-card">
+                    <b>05</b>
+                    <h3>DynamoDB</h3>
+                    <p>Stores messages with their AI results.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container contact-content">
+
+            <div class="contact-info">
+                <span>CONTACT & FEEDBACK</span>
+
+                <h2>
+                    We'd love to
+                    <strong>hear from you.</strong>
+                </h2>
+
+                <p>
+                    Send us a message or feedback. Your submission will be
+                    processed through our AWS serverless backend.
+                </p>
+
+                <div class="checks">
+                    <p>✓ Fast serverless processing</p>
+                    <p>✓ Cloud-based data storage</p>
+                    <p>✓ Simple and responsive interface</p>
+                </div>
+            </div>
+
+
+            <!-- Contact Form -->
+            <div class="form-card">
+                <h3>Send a Message</h3>
+                <p>Fill in the details below.</p>
+
+                <form id="contactForm">
+
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="submitButton">
+                        Submit Message →
+                    </button>
+
+                    <p id="formStatus"></p>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <strong>☁ CloudConnect</strong>
+                <p>Serverless Contact & Feedback Management System</p>
+            </div>
+
+            <p>© 2026 • HTML • CSS • JavaScript • AWS</p>
+        </div>
+    </footer>
+
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CloudConnect AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">☁ Cloud<span>Connect</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container admin">
+
+        <div class="admin-head">
+            <div>
+                <span class="badge">ADMIN DASHBOARD</span>
+                <h1>Feedback <span>inbox</span></h1>
+                <p>Messages analysed by Amazon Comprehend. Manage them through the REST API (GET / PUT / DELETE).</p>
+            </div>
+
+            <form id="keyForm" class="key-form">
+                <label for="adminKey">Admin key</label>
+                <input type="password" id="adminKey" placeholder="Enter admin key" autocomplete="off" required>
+                <button type="submit">Load messages</button>
+            </form>
+        </div>
+
+        <p id="adminStatus" class="admin-status"></p>
+
+        <section id="dashboard" hidden>
+
+            <div class="stats">
+                <div class="stat"><b id="statTotal">0</b><span>Total</span></div>
+                <div class="stat positive"><b id="statPositive">0</b><span>Positive</span></div>
+                <div class="stat neutral"><b id="statNeutral">0</b><span>Neutral / Mixed</span></div>
+                <div class="stat negative"><b id="statNegative">0</b><span>Negative</span></div>
+                <div class="stat"><b id="statOpen">0</b><span>Not resolved</span></div>
+            </div>
+
+            <div class="filters">
+                <select id="filterSentiment" aria-label="Filter by sentiment">
+                    <option value="">All sentiments</option>
+                    <option>POSITIVE</option>
+                    <option>NEUTRAL</option>
+                    <option>MIXED</option>
+                    <option>NEGATIVE</option>
+                    <option>UNANALYZED</option>
+                </select>
+                <select id="filterStatus" aria-label="Filter by status">
+                    <option value="">All statuses</option>
+                    <option>New</option>
+                    <option>In Progress</option>
+                    <option>Resolved</option>
+                </select>
+                <input type="search" id="filterText" placeholder="Search name, email, message..." aria-label="Search">
+                <button type="button" id="refreshBtn" class="secondary">↻ Refresh</button>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Received</th>
+                            <th>From</th>
+                            <th>Message &amp; AI insight</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+                <p id="emptyState" class="empty" hidden>No messages match the current filters.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

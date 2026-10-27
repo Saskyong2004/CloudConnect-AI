@@ -1,0 +1,33 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ContactMessagesTableOnly",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:GetItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:Scan"
+      ],
+      "Resource": "arn:aws:dynamodb:ap-south-1:YOUR_ACCOUNT_ID:table/CloudConnectAI"
+    },
+    {
+      "Sid": "ComprehendAnalysis",
+      "Effect": "Allow",
+      "Action": [
+        "comprehend:DetectSentiment",
+        "comprehend:DetectKeyPhrases",
+        "comprehend:DetectDominantLanguage"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OptionalSnsAlerts",
+      "Effect": "Allow",
+      "Action": "sns:Publish",
+      "Resource": "arn:aws:sns:ap-south-1:YOUR_ACCOUNT_ID:cloudconnect-alerts"
+    }
+  ]
+}
